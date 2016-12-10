@@ -1,0 +1,79 @@
+#input
+{
+	position:relative;
+	width:500px;
+	padding: 2pt;
+	border:1px solid;
+}
+#input2
+{
+	position:relative;
+	width:500px;
+	padding: 2pt;
+	border:1px solid;
+}
+
+#reloj
+{
+	position:relative;
+	vertical-align: bottom;
+	visibility: hidden;
+}
+
+#rel
+{
+	position:relative;
+	vertical-align: bottom;
+	visibility: hidden;
+}
+
+#lista
+{
+	width:300px;
+	background-color:#ffffff;
+	color:#000000;
+	border:1px solid;
+	border-color:#000000;
+	z-index:1;
+	display:none;
+	margin-top: 5px;
+	height: 25px;
+	
+}
+
+#lista a
+{
+	display: block;
+	background-color:#ffffff;
+	padding: 2pt;
+}
+
+#lista a:hover
+{
+	background-color:#00aaaa;
+}
+#lista2
+{
+	width:180px;
+	background-color:#ffffff;
+	color:#000000;
+	border:1px solid;
+	border-color:#000000;
+	z-index:1;
+	display:none;
+	margin-top: 5px;
+	height: 25px;
+	
+}
+
+#lista2 a
+{
+	display: block;
+	background-color:#ffffff;
+	padding: 2pt;
+}
+
+#lista2 a:hover
+{
+	background-color:#00aaaa;
+}

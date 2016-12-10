@@ -1,0 +1,69 @@
+create database doctora;
+use doctora;
+
+create table paciente(
+id_paciente int not null auto_increment primary key,
+nombre_completo varchar(200) not null,
+foto MEDIUMBLOB NOT NULL,
+dui varchar(10) null,
+nit varchar(17) null,
+dir varchar(150) not null,
+numero varchar(9) not null,
+depto char(30) not null,
+ciudad char(30) not null,
+estado_civil char(20) not null,
+edad int not null,
+fecha date not null,
+fecha_nacimiento date not null,
+email varchar(40) null,
+ocupacion varchar(50) not null,
+lugar_trabajo varchar(50) null,
+dir_trabajo varchar (100) null,
+tel_trabajo varchar(9) null,
+departamento varchar(50) null,
+tipo_sangre varchar(20) not null,
+peso int not null,
+presion varchar(20) not null,
+sexo char(10) not null,
+talla float(8,2) not null,
+antecedentes varchar(200) null,
+remitido varchar(30) null,
+responsable varchar(150) null);
+
+
+create table usuarios(
+id int not null auto_increment primary key,
+usuario varchar(10) not null,
+contrasena varchar(10) not null,
+nombre varchar(100) not null,
+tipo varchar(20) not null);
+
+create table medicamentos(
+id_medicamento int not null auto_increment primary key,
+medicamento varchar(100) not null,
+tipo varchar(50) null,
+dosis varchar(100) not null,
+observaciones varchar(200) null);
+
+create table expedientes(
+id_expediente int not null auto_increment primary key,
+id_paciente int not null,
+id_medicamento int null,
+diagnostico varchar(500) not null,
+hora time not null,
+fecha date not null,
+intervenciones varchar(200) null,
+estudios varchar(200) null,
+observaciones varchar(200) not null,
+sintomas varchar(200) not null,
+proxima_Cita date null,
+FOREIGN KEY(id_medicamento) REFERENCES medicamentos(id_medicamento),
+FOREIGN KEY(id_paciente) REFERENCES paciente(id_paciente));
+
+create table citas(
+id_citas int not null auto_increment primary key,
+id_paciente int not null,
+hora time not null,
+fecha date not null,
+motivo_cita varchar(100) null,
+FOREIGN KEY(id_paciente) REFERENCES paciente(id_paciente));

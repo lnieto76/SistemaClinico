@@ -1,0 +1,1 @@
+<a href='close.php'>Cerrar Sesion</a>";
