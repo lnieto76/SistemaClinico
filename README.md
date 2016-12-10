@@ -1,2 +1,2 @@
-"# SistemaClinico" 
-"# SistemaClinico" 
+Sistema Clinico 
+Control de pacientes
